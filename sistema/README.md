@@ -17,6 +17,16 @@ A simple Next.js web application with TypeScript and API Routes, configured to r
    - **Frontend:** [http://localhost:3000](http://localhost:3000)
    - **API Route:** [http://localhost:3000/api/hello](http://localhost:3000/api/hello)
 
+## Running Tests
+
+To run the Jest and Cucumber (Gherkin) tests inside your running Docker container, execute:
+
+```bash
+docker compose exec web npm test
+```
+
+This ensures that testing is performed in the very same environment where dependencies were built and installed.
+
 ## Development
 - The `docker-compose.yml` file maps your local files into the container.
 - Any changes you make to the files in `src/` will automatically trigger a hot reload in your browser.

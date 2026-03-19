@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "jest"
   },
   "dependencies": {
     "next": "latest",
@@ -14,9 +15,13 @@
     "react-dom": "latest"
   },
   "devDependencies": {
+    "@types/jest": "latest",
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
+    "jest": "latest",
+    "jest-cucumber": "latest",
+    "ts-jest": "latest",
     "typescript": "latest"
   }
 }
