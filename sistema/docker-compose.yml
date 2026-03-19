@@ -1,0 +1,17 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      # Mount the current directory to /app in the container for hot-reloading
+      - .:/app
+      # Create anonymous volumes so the container's build artifacts and node_modules aren't overwritten by the host
+      - /app/node_modules
+      - /app/.next
+    environment:
+      - NODE_ENV=development
+      # Use polling for hot reloading to ensure it works across different host OS file systems
+      - WATCHPACK_POLLING=true
